@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////
+// Here you set up the path to required directories.                  //
+//                                                                    //
+// ConanPath is for where the game executable is.                     //
+// Example: ConanPath=h:\SteamLibrary\steamapps\common\Conan Exiles   //
+//                                                                    //
+// WorkshopPath is where the root Steam folder with your Conan Exiles //
+// Workshop files is.                                                 //
+// By default it's something like:                                    //
+//    c:\Steam                                                        //
+// but if you have Steam folders on other drives, it could be also    //
+// something like this:                                               //
+//    g:\SteamLibrary                                                 //
+// Choose the one that contains this folder:                          //
+//    \steamapps\workshop\content\440900\                             //
+////////////////////////////////////////////////////////////////////////
+
+ConanPath=
+WorkshopPath=
