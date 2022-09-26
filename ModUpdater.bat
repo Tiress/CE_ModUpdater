@@ -1,5 +1,8 @@
 @echo off
 
+:: if the program didn't finish correctly, make sure to delete the temporary batch file
+if exist _temp.bat del /F /Q _temp.bat
+
 :: if we already have SteamCMD, go straight to updating
 if exist "%cd%\SteamCMD\steamcmd.exe" goto :main
 
