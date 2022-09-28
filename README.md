@@ -3,6 +3,8 @@ A little tool for Conan Exiles that uses SteamCMD to update your mods.
 
 It's meant for client only, don't try to use it on the server!
 
+Download [here](https://github.com/Tiress/CE_ModUpdater/releases/download/v0.1.0/CE_ModUpdater.7z)
+
 # How it works
 It downloads a SteamCMD client and runs it with the mods from your modlist.txt as parameters.
 
