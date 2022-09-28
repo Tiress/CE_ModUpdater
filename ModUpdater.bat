@@ -47,13 +47,13 @@ pushd "%~dp0"
 for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"ConanPath=*" config.txt') do set "ConanPath=%%i"
 
 :: check for the correct path
-if not exist [%ConanPath%\ConanSandbox.exe] goto :nopath_conan
+if not exist "%ConanPath%\ConanSandbox.exe" goto :nopath_conan
 
 :: get the root Steam folder with Conan Exiles workshop files
 for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"WorkshopPath=*" config.txt') do set "WorkshopPath=%%i"
 
 :: check for the correct path
-if not exist [%WorkshopPath%\steam.dll] goto :nopath_ws
+if not exist "%WorkshopPath%\steam.dll" goto :nopath_ws
 
 :: start preparing _temp.txt
 echo:@echo off>_temp.txt
