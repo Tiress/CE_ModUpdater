@@ -46,12 +46,14 @@ pushd "%~dp0"
 :: get the game executable folder from config file
 for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"ConanPath=*" config.txt') do set "ConanPath=%%i"
 
-if [%ConanPath%] == [] goto :nopath
+:: check for the correct path
+if not exist [%ConanPath%\ConanSandbox.exe] goto :nopath_conan
 
 :: get the root Steam folder with Conan Exiles workshop files
 for /f "tokens=2 delims=^=" %%i in ('findstr /rbc:"WorkshopPath=*" config.txt') do set "WorkshopPath=%%i"
 
-if [%WorkshopPath%] == [] goto :nopath
+:: check for the correct path
+if not exist [%WorkshopPath%\steam.dll] goto :nopath_ws
 
 :: start preparing _temp.txt
 echo:@echo off>_temp.txt
@@ -85,11 +87,21 @@ echo *-----------------------------------------------*
 echo:
 goto :end
 
-:nopath
+:nopath_conan
 
 echo:
 echo *-----------------------------------------------*
-echo *   The path isn't filled up correctly.         *
+echo *   ConanPath isn't filled up correctly.        *
+echo *   Aborting update process.                    *
+echo *-----------------------------------------------*
+echo:
+goto :end
+
+:nopath_ws
+
+echo:
+echo *-----------------------------------------------*
+echo *   WorkshopPath isn't filled up correctly.     *
 echo *   Aborting update process.                    *
 echo *-----------------------------------------------*
 echo:
