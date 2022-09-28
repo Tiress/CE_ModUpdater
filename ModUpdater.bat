@@ -20,10 +20,6 @@ bitsadmin /transfer mydownload /download /priority normal "https://steamcdn-a.ak
 echo:
 echo *-----------------------------------------------*
 echo *   Download complete.                          *
-echo *-----------------------------------------------*
-
-echo:
-echo *-----------------------------------------------*
 echo *   Preparing the file...                       *
 echo *-----------------------------------------------*
 
