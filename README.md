@@ -46,4 +46,4 @@ If it happens to you and the update gets stuck like that for more than 30 second
 - add more error checks
 - turn it into a compiled app?
 - pull the path automatically so that the user doesn't have to fill the config file
-
+- give the user an option to choose servermodlist instead of modlist
