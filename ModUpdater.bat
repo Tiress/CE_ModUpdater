@@ -3,6 +3,10 @@
 :: if the program didn't finish correctly, make sure to delete the temporary batch file
 if exist _temp.bat del /F /Q _temp.bat
 
+:: kill running Conan related tasks to make sure we don't get stuck on files being locked
+taskkill /im ConanSandbox.exe /f
+taskkill /im ConanSandbox_BE.exe /f
+
 :: if we already have SteamCMD, go straight to updating
 if exist "%cd%\SteamCMD\steamcmd.exe" goto :main
 
